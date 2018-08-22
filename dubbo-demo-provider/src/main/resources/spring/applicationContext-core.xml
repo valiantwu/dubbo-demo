@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-4.1.xsd
+		http://code.alibabatech.com/schema/dubbo 
+		http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <context:component-scan base-package="org.woo.dubbo"></context:component-scan>
+    <context:annotation-config></context:annotation-config>
+
+    <dubbo:application name="demo-provider"/>
+
+    <dubbo:registry address="zookeeper://192.168.1.106:2181"/>
+
+    <!--<dubbo:registry address="zookeeper://172.20.114.100:2181"/>-->
+
+    <dubbo:protocol name="dubbo" port="20889"/>
+
+    <dubbo:provider timeout="6000"></dubbo:provider>
+
+    <bean id="demoService" class="org.woo.dubbo.ControlServiceImpl"/>
+
+    <dubbo:service interface="org.woo.dubbo.IControlService" ref="demoService"/>
+</beans>
