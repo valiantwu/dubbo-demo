@@ -18,7 +18,7 @@
 
     <!--<dubbo:registry address="zookeeper://172.20.114.100:2181"/>-->
 
-    <dubbo:protocol name="dubbo" port="20889"/>
+    <dubbo:protocol name="dubbo" port="20880"/>
 
     <dubbo:provider timeout="6000"></dubbo:provider>
 

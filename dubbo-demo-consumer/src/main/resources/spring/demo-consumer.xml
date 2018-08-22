@@ -9,11 +9,11 @@
 
     <!--<dubbo:registry address="zookeeper://172.20.114.100:2181"/>-->
 
-    <dubbo:protocol name="dubbo" port="20889"></dubbo:protocol>
+    <dubbo:protocol name="dubbo" port="20880"></dubbo:protocol>
 
     <dubbo:consumer timeout="6000"></dubbo:consumer>
 
-    <dubbo:reference id="demoService" url="dubbo://localhost:20889" check="false"
+    <dubbo:reference id="demoService" url="dubbo://localhost:20880" check="false"
                      interface="org.woo.dubbo.IControlService"/>
 
     <!--<dubbo:reference id="demoService" url="dubbo://172.20.114.100:20880" check="false"-->
