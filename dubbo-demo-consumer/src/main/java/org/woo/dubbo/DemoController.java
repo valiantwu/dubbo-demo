@@ -12,7 +12,7 @@ public class DemoController {
 	@Resource
 	private IControlService controlService;
 
-	@RequestMapping("/sayhello")
+	@RequestMapping("/sayhello.do")
 	@ResponseBody
 	public String hello(String name) {
 		return controlService.sayHello(null);
