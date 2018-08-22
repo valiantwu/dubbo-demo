@@ -20,6 +20,7 @@ repositories {
 }
 def corelib = '/env-dev/mservice/corelib'
 def trd = '/env-dev/mservice/trd'
+def outputdir = '/env-dev/mservice/corelib'
 sourceSets {
     main {
         java {
@@ -60,7 +61,7 @@ task copytolib(type: Copy, dependsOn: build) {
     group 'build'
     description '拷贝本工程构建jar包到lib'
     from 'build/libs'
-    into corelib
+    into outputdir
     exclude '*source*.jar'
 }
 
