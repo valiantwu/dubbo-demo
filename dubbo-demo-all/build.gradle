@@ -10,9 +10,9 @@ tasks.withType(JavaCompile) {
 dependencies {
 
 }
-def corelib = '/env-dev/mservice/corelib'
-def trd = '/env-dev/mservice/trd'
-def outputdir = '/env-dev/mservice/corelib'
+def corelib = 'c:/evn-dev/mservice/corelib'
+def trd = 'c:/evn-dev/mservice/trd'
+def outputdir = 'c:/evn-dev/mservice/corelib'
 ext.projectname = [
         "dubbo-demo-api",
         "dubbo-demo-consumer",
