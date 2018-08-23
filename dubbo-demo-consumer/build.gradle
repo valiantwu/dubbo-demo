@@ -20,9 +20,9 @@ targetCompatibility = 1.8
 repositories {
     mavenCentral()
 }
-def corelib = '/env-dev/mservice/corelib'
-def trd = '/env-dev/mservice/trd'
-def outputdir = '/usr/local/services/apache-tomcat-7.0.90-1/webapps'
+def corelib = 'c:/evn-dev/mservice/corelib'
+def trd = 'c:/evn-dev/mservice/trd'
+def outputdir = 'c:/evn-dev/mservice/corelib'
 sourceSets {
     main {
         java {
@@ -51,13 +51,14 @@ dependencies {
     compile fileTree(dir: trd, include: 'spring-context*.jar')
     compile fileTree(dir: trd, include: 'dubbo*.jar')
     compile fileTree(dir: trd, include: 'guava*.jar')
-    compile fileTree(dir: trd, include: 'javassist-3.21.0-GA.jar')
+    compile fileTree(dir: trd, include: 'javassist*GA.jar')
     compile fileTree(dir: trd, include: 'netty-all-4.1.22.Final.jar')
     compile fileTree(dir: trd, include: 'netty-3.10.5.Final.jar')
     compile fileTree(dir: trd, include: 'curator-framework-4.0.0.jar')
     compile fileTree(dir: trd, include: 'curator-client-4.0.0.jar')
     compile fileTree(dir: trd, include: 'zookeeper*.jar')
-    compile fileTree(dir: corelib, include: '*.jar')
+    compile fileTree(dir: trd, include: 'javax.servlet-api*.jar')
+    compile fileTree(dir: corelib, include: 'dubbo-demo-api*.jar')
 }
 task sourcesJar(type: Jar, dependsOn: build) {
     classifier = 'sources'
