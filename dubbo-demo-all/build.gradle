@@ -15,8 +15,8 @@ def trd = 'c:/evn-dev/mservice/trd'
 def outputdir = 'c:/evn-dev/mservice/corelib'
 ext.projectname = [
         "dubbo-demo-api",
-        "dubbo-demo-consumer",
-        "dubbo-demo-provider" 
+        "dubbo-demo-provider",
+        "dubbo-demo-consumer" 
 ]
 
 ext.buildtasknames = new ArrayList<String>();
